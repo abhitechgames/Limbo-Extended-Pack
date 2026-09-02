@@ -41,27 +41,37 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _BubbleAmount: 0.35
+    - _Aspect: 0
+    - _BubbleAmount: 0.3
+    - _BubbleAspect: 0
     - _BubbleDepth: 0.8
     - _BubbleDrift: 0.08
-    - _BubbleSize: 0.045
-    - _BubbleSoftness: 0.12
-    - _BubbleSpeed: 0.35
+    - _BubbleSize: 0.07
+    - _BubbleSoftness: 0.18
+    - _BubbleSpeed: 0.3
+    - _DeepOpacity: 0.85
+    - _DeepShowThrough: 0.3
+    - _DistortionScale: 14
+    - _DistortionSpeed: 0.9
+    - _DistortionStrength: 0.014
     - _EdgeFade: 0.25
     - _EnableExternalAlpha: 0
     - _FlowSpeedX: 0.08
     - _FlowSpeedY: 0.03
     - _FoamNoiseScale: 21.18
     - _FoamSpeed: 2
-    - _FoamWidth: 0.06
-    - _Wave2Frequency: 6
-    - _Wave2Height: 0.025
-    - _Wave2Speed: 2.2
+    - _FoamWidth: 0.025
+    - _ShallowOpacity: 0.35
+    - _ShallowShowThrough: 0.85
+    - _UseRefraction: 0
+    - _Wave2Frequency: 0.62
+    - _Wave2Height: 0.14
+    - _Wave2Speed: 1.3
     - _WaveArea: 0.14
-    - _WaveFrequency: 3
-    - _WaveHeight: 0.06
-    - _WaveSharpness: 1.91
-    - _WaveSpeed: 1.5
+    - _WaveFrequency: 0.28
+    - _WaveHeight: 0.3
+    - _WaveSharpness: 1
+    - _WaveSpeed: 0.8
     - _ZWrite: 0
     m_Colors:
     - _BubbleColor: {r: 1, g: 1, b: 1, a: 0.65}

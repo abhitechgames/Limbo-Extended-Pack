@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6952628394585513908}
   - component: {fileID: 4648017363548709185}
   - component: {fileID: 6952628394585513800}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -50,8 +50,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movingSpeed: 6.5
+  groundAcceleration: 55
+  groundDeceleration: 38
+  airAcceleration: 26
+  airDeceleration: 10
   jumpForce: 15
+  fallGravityMultiplier: 1.2
+  lowJumpMultiplier: 2.2
+  maxFallSpeed: 32
+  coyoteTime: 0.12
+  jumpBufferTime: 0.12
+  climbSpeed: 4
   groundCheck: {fileID: 6952628394686255622}
+  groundCheckRadius: 0.28
+  groundLayers:
+    serializedVersion: 2
+    m_Bits: 4294967215
+  grabKey: 101
+  grabDistance: 1.2
+  grabBreakDistance: 2.4
+  grabLayers:
+    serializedVersion: 2
+    m_Bits: 256
+  waterLayers:
+    serializedVersion: 2
+    m_Bits: 16
+  swimSpeedFactor: 0.6
+  swimGravityScale: 0.3
+  buoyancy: 16
+  waterDrag: 2.2
+  swimStrokeForce: 14
+  strokeInterval: 0.22
+  wetJumpScale: 0.8
+  surfaceJumpDepth: 0.9
 --- !u!212 &6952628394585513910
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -130,9 +161,9 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!58 &4648017363548709185
 CircleCollider2D:
@@ -201,7 +232,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6952628394686255622}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: IsGroundedPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
