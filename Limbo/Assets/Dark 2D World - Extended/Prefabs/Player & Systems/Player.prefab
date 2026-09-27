@@ -49,24 +49,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8367f8f5ad069264c8b1b800b031e6c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpKey: 32
+  grabKey: 101
+  horizontalAxis: Horizontal
+  verticalAxis: Vertical
   movingSpeed: 6.5
   groundAcceleration: 55
   groundDeceleration: 38
   airAcceleration: 26
   airDeceleration: 10
-  jumpForce: 15
+  jumpForce: 40
   fallGravityMultiplier: 1.2
   lowJumpMultiplier: 2.2
   maxFallSpeed: 32
   coyoteTime: 0.12
   jumpBufferTime: 0.12
   climbSpeed: 4
+  ladderJumpScale: 0.85
+  ladderJumpPush: 4.5
+  ladderRegrabDelay: 0.25
+  stepOffLadderSideways: 1
   groundCheck: {fileID: 6952628394686255622}
   groundCheckRadius: 0.28
   groundLayers:
     serializedVersion: 2
     m_Bits: 4294967215
-  grabKey: 101
   grabDistance: 1.2
   grabBreakDistance: 2.4
   grabLayers:
@@ -150,7 +157,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 3
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
@@ -200,7 +207,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.55
+  m_Radius: 0.45
 --- !u!95 &6952628394585513800
 Animator:
   serializedVersion: 7
